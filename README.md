@@ -1,2 +1,3 @@
-# yazplug
-Yet Another Zsh Plugin Manager
+# yazp
+
+Yet Another Zsh Plugin manager
