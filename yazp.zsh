@@ -1,8 +1,11 @@
+# export yazp dir
+export YAZPDIR=$(cd $(dirname $0 );pwd)
+
 # Source functions
-[ -f "./src/util.zsh" ] && source "src/util.zsh"
-[ -f "./src/yazp_plug.zsh" ] && source "src/yazp_plug.zsh"
-[ -f "./src/yazp_theme.zsh" ] && source "src/yazp_theme.zsh"
-[ -f "./src/yazp_comp.zsh" ] && source "src/yazp_comp.zsh"
+source "$YAZPDIR/src/util.zsh"
+source "$YAZPDIR/src/yazp_plug.zsh"
+source "$YAZPDIR/src/yazp_theme.zsh"
+source "$YAZPDIR/src/yazp_comp.zsh"
 
 # Plugin manager interface
 function yazp() {

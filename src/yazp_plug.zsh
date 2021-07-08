@@ -8,10 +8,10 @@ function zsh_enable_plugin() {
 function yazp_add_plugin() {
     # $1: username/plugin_name
     PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
-    if [ -d "$ZDOTDIR/plugins/$PLUGIN_NAME" ]; then
+    if [ -d "$YAZPDIR/plugins/$PLUGIN_NAME" ]; then
         zsh_enable_plugin $PLUGIN_NAME
     else
-        git clone "https://github.com/$1.git" "$ZDOTDIR/plugins/$PLUGIN_NAME"
+        git clone "https://github.com/$1.git" "$YAZPDIR/plugins/$PLUGIN_NAME"
         zsh_enable_plugin $PLUGIN_NAME
     fi
 }
