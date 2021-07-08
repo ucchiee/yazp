@@ -4,7 +4,7 @@ function yazp_add_completion() {
         # For completions
 		completion_file_path=$(ls $ZDOTDIR/plugins/$PLUGIN_NAME/_*)
 		fpath+="$(dirname "${completion_file_path}")"
-        zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh"
+        yazp_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh"
     else
         git clone "https://github.com/$1.git" "$ZDOTDIR/plugins/$PLUGIN_NAME"
 		fpath+=$(ls $ZDOTDIR/plugins/$PLUGIN_NAME/_*)

@@ -1,8 +1,8 @@
 function zsh_enable_plugin() {
     # $1: plugin name
-    zsh_add_file "plugins/$1/$1.plugin.zsh" || \
-    zsh_add_file "plugins/$1/$1.zsh" || \
-    zsh_add_file "plugins/$1/$1.sh"
+    yazp_add_file "plugins/$1/$1.plugin.zsh" || \
+    yazp_add_file "plugins/$1/$1.zsh" || \
+    yazp_add_file "plugins/$1/$1.sh"
 }
 
 function yazp_add_plugin() {
