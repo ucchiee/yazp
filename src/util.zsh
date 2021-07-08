@@ -1,5 +1,5 @@
 # Function to source files if they exist
-function zsh_add_file() {
-    # $1: filename in $ZDOTDIR
-    [ -f "$ZDOTDIR/$1" ] && source "$ZDOTDIR/$1"
+function yazp_add_file() {
+    # $1: filename in $YAZPDIR
+    [ -f "$YAZPDIR/$1" ] && source "$YAZPDIR/$1"
 }
