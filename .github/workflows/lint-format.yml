@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -24,23 +24,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-          
-      - name: Run the sh-checker
-        uses: luizm/action-sh-checker@master
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@master
         env:
-          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SHELLCHECK_OPTS: -e SC1090 SC1091 # exclude some shellcheck warnings.
-          SHFMT_OPTS: -i 4 -ci -sr -s # arguments to shfmt.
-        with:
-          sh_checker_comment: flase
-          # sh_checker_exclude: ".terraform ^dir/example.sh"
+          SHELLCHECK_OPTS: -e SC1090 -e SC1091
+          check_together: "yes"
+          additional_files: "yazp.zsh"
+          scandir: "./src"
