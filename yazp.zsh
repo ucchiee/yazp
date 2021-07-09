@@ -1,5 +1,10 @@
+# shellcheck shell=bash
+# shellcheck disable=SC1090,SC1091
+
 # export yazp dir
-export YAZPDIR=$(cd $(dirname $0 );pwd)
+cd "$(dirname "$0")" || exit
+YAZPDIR=$(pwd)
+export YAZPDIR
 
 # Source functions
 source "$YAZPDIR/src/util.zsh"
@@ -12,10 +17,11 @@ function yazp() {
     # $1: name of plugin, theme, or completion
     type=$1
     shift
-    if [ $type = "plug" ]; then
-        yazp_add_plugin $@
-    elif [ $type = "theme" ]; then
-        yazp_add_theme $@
-    elif [ $type = "tool" ]; then
-        yazp_add_completion $@
+    if [ "$type" = "plug" ]; then
+        yazp_add_plugin "$@"
+    elif [ "$type" = "theme" ]; then
+        yazp_add_theme "$@"
+    elif [ "$type" = "tool" ]; then
+        yazp_add_completion "$@"
+    fi
 }
