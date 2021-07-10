@@ -21,7 +21,7 @@ function yazp() {
         yazp_add_plugin "$@"
     elif [ "$type" = "theme" ]; then
         yazp_add_theme "$@"
-    elif [ "$type" = "tool" ]; then
+    elif [ "$type" = "comp" ]; then
         yazp_add_completion "$@"
     fi
 }
