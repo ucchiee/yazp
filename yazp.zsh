@@ -12,17 +12,22 @@ source "$YAZPDIR/src/util.zsh"
 source "$YAZPDIR/src/yazp_plug.zsh"
 source "$YAZPDIR/src/yazp_theme.zsh"
 source "$YAZPDIR/src/yazp_comp.zsh"
+source "$YAZPDIR/src/yazp_update.zsh"
 
 # Plugin manager interface
 function yazp() {
     # $1: name of plugin, theme, or completion
-    type="$1"
-    shift
-    if [ "$type" = "plug" ]; then
+    if [ "$1" = "plug" ]; then
+        shift
         yazp_add_plugin "$@"
-    elif [ "$type" = "theme" ]; then
+    elif [ "$1" = "theme" ]; then
+        shift
         yazp_add_theme "$@"
-    elif [ "$type" = "comp" ]; then
+    elif [ "$1" = "comp" ]; then
+        shift
         yazp_add_completion "$@"
+    elif [ "$1" = "update" ]; then
+        shift
+        yazp_update "$@"
     fi
 }
