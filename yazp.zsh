@@ -4,6 +4,7 @@
 # export yazp dir
 cd "$(dirname "$0")" || exit
 YAZPDIR=$(pwd)
+cd "$HOME"
 export YAZPDIR
 
 # Source functions
@@ -15,7 +16,7 @@ source "$YAZPDIR/src/yazp_comp.zsh"
 # Plugin manager interface
 function yazp() {
     # $1: name of plugin, theme, or completion
-    type=$1
+    type="$1"
     shift
     if [ "$type" = "plug" ]; then
         yazp_add_plugin "$@"
