@@ -4,7 +4,7 @@
 # export yazp dir
 cd "$(dirname "$0")" || exit
 YAZPDIR=$(pwd)
-cd "$HOME"
+cd "$HOME" || exit
 export YAZPDIR
 
 # Source functions
