@@ -4,6 +4,8 @@ Yet Another Zsh Plugin manager
 
 I wrote minimal yet powerful zsh plugin manager, yazp.
 
+**WIP**: This tool might be changed without backward compatibility.
+
 ## Installation
 
 To install yazp clone this repository to e.g. `~/.yazp`:
@@ -29,7 +31,7 @@ yazp plug <username/plugin_name> (<file_to_source_in_the_repo>)
 yazp theme <username/plugin_name> (<path_to_config_file>)
 ```
 
-- `file_to_source_in_the_repo`: additional file to source in the repo can be specified.
+- `file_to_source_in_the_repo`: additional file to source in the repo.
 - `path_to_config_file`: this file is sourced before prompt is enabled.
 
 ### Example
