@@ -4,7 +4,7 @@ Yet Another Zsh Plugin manager
 
 I wrote minimal yet powerful and fast zsh plugin manager, yazp.
 
-yazp stands for *Y*et *A*nother *Z*sh *P*lugin manager.
+yazp stands for **Y**et **A**nother **Z**sh **P**lugin manager.
 
 **WIP**: This tool might be changed without backward compatibility.
 
