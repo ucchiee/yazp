@@ -2,6 +2,6 @@
 function yazp_update() {
     current_dir="$(pwd)"
     cd "$YAZPDIR" || exit
-    git pull
+    git pull || cd "$current_dir" && exit || exit
     cd "$current_dir" || exit
 }
