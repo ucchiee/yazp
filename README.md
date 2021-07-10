@@ -6,6 +6,10 @@ I wrote minimal yet powerful zsh plugin manager, yazp.
 
 **WIP**: This tool might be changed without backward compatibility.
 
+## Dependency
+
+- git
+
 ## Installation
 
 To install yazp clone this repository to e.g. `~/.yazp`:
@@ -17,7 +21,7 @@ git clone https://github.com/ucchiee/yazp.git ~/.yazp
 and source it from your `.zshrc` (above compinit):
 
 ```
-source ~/.yazp/yazp.zsh
+[ -e ~/.yazp/yazp.zsh ] && source ~/.yazp/yazp.zsh
 ```
 
 ## Usage
