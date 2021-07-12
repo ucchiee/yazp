@@ -106,7 +106,8 @@ This command call the script below:
 
 ```sh
 current_dir="$(pwd)"
-cd "$YAZPDIR" || exit
+cd "$YAZPDIR"
 git pull
-cd "$current_dir" || exit
+source "$YAZPDIR/yazp.zsh"
+cd "$current_dir"
 ```
