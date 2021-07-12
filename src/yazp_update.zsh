@@ -4,5 +4,6 @@ function yazp_update() {
     cd "$YAZPDIR" || exit
     # shellcheck disable=SC2164
     git pull || cd "$current_dir"
+    source "$YAZPDIR/yazp.zsh"
     cd "$current_dir" || exit
 }
