@@ -8,6 +8,28 @@ yazp stands for **Y**et **A**nother **Z**sh **P**lugin manager.
 
 **WIP**: This tool might be changed without backward compatibility.
 
+## TL;DR
+
+```sh
+function yazp_init() {
+    if [ -e "${ZDOTDIR:-"$HOME"}/.yazp/yazp.zsh" ]; then
+        source "${ZDOTDIR:-"$HOME"}/.yazp/yazp.zsh"
+    else
+        git clone https://github.com/ucchiee/yazp "${ZDOTDIR:-"$HOME"}/.yazp"
+        yazp_init
+    fi
+}
+
+yazp_init
+yazp plug "zsh-users/zsh-autosuggestions"
+yazp plug "zsh-users/zsh-syntax-highlighting"
+yazp plug "hlissner/zsh-autopair"
+yazp theme "sindresorhus/pure" "zsh_pure"
+
+# autoload -Uz compinit
+# compinit -C
+```
+
 ## Dependency
 
 - git
