@@ -102,7 +102,7 @@ yazp update
 
 **NOTE**: You should not put this command in your .zshrc because this may increase your zsh initialization time depending on your network speed.
 
-This command call the script below:
+This command call the script like the one below:
 
 ```sh
 current_dir="$(pwd)"
