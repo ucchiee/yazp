@@ -26,7 +26,7 @@ function yazp() {
     elif [ "$1" = "comp" ]; then
         shift
         yazp_add_completion "$@"
-    elif [ "$1" = "update" ]; then
+    elif [ "$1" = "upgrade" ]; then
         shift
         yazp_upgrade "$@"
     fi
