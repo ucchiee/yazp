@@ -1,6 +1,6 @@
 # shellcheck shell=bash
 # shellcheck disable=SC2164
-function yazp_update() {
+function yazp_upgrade() {
     current_dir="$(pwd)"
     cd "$YAZPDIR" || echo "$YAZPDIR was not found" && return
     git pull || cd "$current_dir"

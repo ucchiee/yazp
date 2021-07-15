@@ -92,22 +92,10 @@ zsh_add_theme "reobin/typewritten"
 zsh_add_theme "spaceship-prompt/spaceship-prompt"
 ```
 
-## Update
+### Upgrade
 
-yazp can be updated like this:
-
-```sh
-yazp update
-```
-
-**NOTE**: You should not put this command in your .zshrc because this may increase your zsh initialization time depending on your network speed.
-
-This command call the script like the one below:
+Upgrade yazp itself like this:
 
 ```sh
-current_dir="$(pwd)"
-cd "$YAZPDIR"
-git pull
-source "$YAZPDIR/yazp.zsh"
-cd "$current_dir"
+yazp upgrade
 ```
