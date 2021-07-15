@@ -92,10 +92,16 @@ zsh_add_theme "reobin/typewritten"
 zsh_add_theme "spaceship-prompt/spaceship-prompt"
 ```
 
-### Upgrade
-
-Upgrade yazp itself like this:
+### Upgrade yazp
 
 ```sh
+# upgrade yazp itself
 yazp upgrade
+```
+
+### Update plugins
+
+```sh
+# update all plugins
+yazp update
 ```
