@@ -5,8 +5,8 @@ function yazp_upgrade() {
         echo "$YAZPDIR was not found"
         return
     fi
-    pushd "$YAZPDIR"
-    git pull || popd
+    pushd "$YAZPDIR" > /dev/null 2>&1
+    git pull || popd > /dev/null 2>&1
     source "$YAZPDIR/yazp.zsh"
-    popd
+    popd > /dev/null 2>&1
 }
