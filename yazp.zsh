@@ -13,6 +13,7 @@ source "$YAZPDIR/src/yazp_plug.zsh"
 source "$YAZPDIR/src/yazp_theme.zsh"
 source "$YAZPDIR/src/yazp_comp.zsh"
 source "$YAZPDIR/src/yazp_upgrade.zsh"
+source "$YAZPDIR/src/yazp_update.zsh"
 
 # Plugin manager interface
 function yazp() {
@@ -29,5 +30,8 @@ function yazp() {
     elif [ "$1" = "upgrade" ]; then
         shift
         yazp_upgrade "$@"
+    elif [ "$1" = "update" ]; then
+        shift
+        yazp_update "$@"
     fi
 }
