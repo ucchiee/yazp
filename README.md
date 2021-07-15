@@ -76,6 +76,13 @@ Also tools like asdf can be installed like this:
 yazp plug "asdf-vm/asdf" "asdf.sh"
 ```
 
+Specific file to source can be provided e.g. asdf.sh.
+This file is sourced like this
+
+```sh
+source "path/to/asdf.sh"
+```
+
 ### Theme Example
 
 ```sh
