@@ -2,9 +2,7 @@
 # shellcheck disable=SC1090,SC1091
 
 # export yazp dir
-cd "$(dirname "$0")" || exit
-YAZPDIR=$(pwd)
-cd "$HOME" || exit
+YAZPDIR="$(dirname "$0")"
 export YAZPDIR
 
 # Source functions
