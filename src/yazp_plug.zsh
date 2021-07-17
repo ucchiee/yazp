@@ -3,9 +3,9 @@
 function zsh_enable_plugin() {
     # $1: plugin name
     # $2: specified file name to source
-    yazp_add_file "plugins/$1/$1.plugin.zsh" ||
-        yazp_add_file "plugins/$1/$1.zsh" ||
-        yazp_add_file "plugins/$1/$2"
+    yazp_add_file "plugins/$1/$2" ||
+        yazp_add_file "plugins/$1/$1.plugin.zsh" ||
+        yazp_add_file "plugins/$1/$1.zsh"
 }
 
 function yazp_add_plugin() {
